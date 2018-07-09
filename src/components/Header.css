@@ -15,3 +15,16 @@
     align-items: center;
     justify-content:space-around
 }
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center
+    }
+
+.auth-buttons{
+    align-items: flex-start;
+    border: 0ch;
+    background-color: green;
+
+}

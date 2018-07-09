@@ -1,5 +1,5 @@
  import React from 'react';
- import {Grid,Row,Col,Jumbotron,Button,ButtonToolbar,FormControl,DropdownButton,MenuItem} from 'react-bootstrap';
+ import {Grid,Row,Col,Jumbotron,Button,FormControl,DropdownButton,MenuItem,Panel} from 'react-bootstrap';
  import './Header.css';
 
  const Header = () => {
@@ -7,16 +7,21 @@
          <div className='main-container'>
             <div className='upper-container'>
                 <h2 style={{color: 'white'}}>WESTERN<br />&nbsp;&nbsp;&nbsp;VIVID</h2>
-                <form className='lower-container'>
-                    <p style={{fontWeight: 500,color: 'white'}}>Search&nbsp;</p>
-                    <FormControl type='text' size={100}/>
+                <Panel>
+                <form>
+                      
+                    <FormControl type='text' size={100} placeholder='Search For Products'/>
                 </form>
-                <div>
-                    <Button bsSize='large' bsStyle='success'>Sign In</Button>
-                    <Button bsSize='large' bsStyle='primary'>Sign Up</Button>
+                </Panel>
+                <Panel className='auth-buttons'>
+                <div >
+                    <Button bsSize='medium' bsStyle='success'>Sign In</Button>&nbsp;&nbsp;&nbsp;
+                    <Button bsSize='medium' bsStyle='primary'>Sign Up</Button>
                 </div>
+                </Panel>
             </div>
             <div className='lower-container'>
+                 
                 <DropdownButton title='Show By Category'>
                     <MenuItem>Shirts</MenuItem>
                     <MenuItem>Jeans</MenuItem>
@@ -30,13 +35,9 @@
                     <MenuItem>Change User preferences</MenuItem>
                     
                 </DropdownButton>
+                
+                
             </div>    
-                        
-                     
-                    
-                         
-                    
-                        
          </div>
      );
  };
