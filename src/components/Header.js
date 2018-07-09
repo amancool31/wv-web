@@ -12,7 +12,7 @@
                 <Well>
                 <form className='search-bar'>
                       
-                    <FormControl type='text' size={100} placeholder='Search For Products'/>
+                    <FormControl type='text' size={70} placeholder='Search For Products'/>
                     <Button>🔍</Button>
                 </form>
                 </Well>

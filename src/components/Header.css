@@ -1,25 +1,28 @@
 .main-container{
     background-color: green;
-    padding-top: 2ch;
-    border: outset;
-    border-color: green
-       
+     
+    border: inset;
+    border-color: green;
+    border-radius: 1ch
 }
   
 .upper-container{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    
+    border:inset;
+    border-color: green;
+    border-radius: 1ch
     
 }
 .lower-container{
     display: flex;
     align-items: center;
     justify-content:space-around;
-    background-color:white;
-    border:outset;
-    border-color: green
+    background-color:forestgreen;
+    border:inset;
+    border-color: green;
+    border-radius: 1ch
 }
  
 
