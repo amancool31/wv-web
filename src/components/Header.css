@@ -1,6 +1,8 @@
 .main-container{
     background-color: green;
     padding-top: 2ch;
+    border: outset;
+    border-color: green
        
 }
   
@@ -9,14 +11,15 @@
     align-items: center;
     justify-content:space-between;
     
+    
 }
 .lower-container{
     display: flex;
     align-items: center;
     justify-content:space-around;
     background-color:white;
-    border:solid;
-    border-color: whitesmoke
+    border:outset;
+    border-color: green
 }
  
 

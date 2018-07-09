@@ -5,7 +5,7 @@
  const Header = () => {
      return (
          <div className='main-container'>
-            <div className='upper-container'>
+            <div className='upper-container '>
                  
                 <h2 style={{color: 'black'}} className='logo'>WESTERN<br />&nbsp;&nbsp;&nbsp;VIVID</h2>
                  
