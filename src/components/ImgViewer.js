@@ -7,12 +7,18 @@ class ImgViewer extends Component {
     render() {
         return (
             <div>
-                <Carousel>
+                <Carousel >
                     <Carousel.Item>
                          <center><img src={img1} /></center>
+                         <Carousel.Caption>
+                             <h2>NEW ARRIVALS!</h2>
+                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                        <center> <img src={img2} /></center>
+                       <Carousel.Caption>
+                       <h2>SUMMER COLLECTION</h2>
+                         </Carousel.Caption>
                     </Carousel.Item>
                      
                 </Carousel>
