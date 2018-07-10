@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import {Carousel} from 'react-bootstrap';
+import {Carousel,Well} from 'react-bootstrap';
 import img1 from '../assets/banner-clothing-1.jpg';
 import img2 from '../assets/banner-clothing-2.jpg';
 import './ImgViewer.css';
+
 
 class ImgViewer extends Component {
     render() {
         return (
             <div>
-                <Carousel>
+               <Well>
+               <Carousel>
                     <Carousel.Item>
                          <center><img src={img1} /></center>
                          <Carousel.Caption>
@@ -25,6 +27,7 @@ class ImgViewer extends Component {
                     </Carousel.Item>
                      
                 </Carousel>
+               </Well> 
             </div>
         );
     }
