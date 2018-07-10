@@ -4,14 +4,26 @@ import './App.css';
 import {Header,ImgViewer,Products} from './components';
 import {BrowserRouter,Route} from 'react-router-dom';
 import MainRoutes from'./MainRoutes';
+ 
+
+ 
+
 class App extends Component {
+  
+  
+   
+   
+
   render() {
     return (
       <BrowserRouter>
         <div >
             <div>
               <Header /> 
-            </div> 
+              
+               
+            </div>
+             
             <MainRoutes />
         </div>
       </BrowserRouter>
