@@ -10,7 +10,7 @@ class MainRoutes extends Component {
                     <Route exact path='/' component={ImgViewer}/>
                     <Route path='/shirts' component={Products}/>
                     <Route path='/Jeans' component={Products}/> 
-               </Switch>
+                </Switch>
             </div>
         );
     }

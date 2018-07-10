@@ -1,6 +1,7 @@
  import React from 'react';
  import {Grid,Row,Col,Jumbotron,Button,FormControl,DropdownButton,MenuItem,Well,Panel} from 'react-bootstrap';
  import './Header.css';
+ import {Link,Route} from 'react-router-dom'; 
   
 
  const Header = () => {
@@ -8,7 +9,7 @@
          <div className='main-container'>
             <div className='upper-container '>
                  
-                <h2 style={{color: 'black'}} className='logo'>WESTERN<br />&nbsp;&nbsp;&nbsp;VIVID</h2>
+               <Link style={{textDecoration:'none'}} to='/'> <h2 style={{color: 'black'}} className='logo'> WESTERN<br />&nbsp;&nbsp;&nbsp;VIVID</h2></Link>
                  
                 <Well>
                 <form className='search-bar'>
@@ -29,12 +30,12 @@
                     
                     
                         
-                       <DropdownButton title='Show By category' bsStyle='success'>
-                          <MenuItem>Shirts</MenuItem> 
-                        <MenuItem>Jeans</MenuItem>
-                        <MenuItem>T-Shirts</MenuItem>
-                        <MenuItem>Kids wear</MenuItem>
-                        <MenuItem>Sweatshirts</MenuItem>
+                       <DropdownButton title='Categories' bsStyle='success'>
+                          <MenuItem style={{flex:1}} ><center><Link style={{textDecoration:'none'}} to='/shirts' >Shirts </Link></center> </MenuItem>  
+                          <MenuItem> <center><Link style={{textDecoration:'none'}} to='/Jeans'>Jeans </Link></center> </MenuItem>   
+                        <MenuItem> <center>T-Shirts </center></MenuItem>
+                        <MenuItem>  <center>Kids wear </center> </MenuItem>
+                        <MenuItem> <center>SweatShirts</center></MenuItem>
                     </DropdownButton>
                     
                                 {/* This will contain the searchbar,show by category,offers */}
