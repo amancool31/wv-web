@@ -1,0 +1,31 @@
+ constructor()
+  {
+    super();
+    this.state={
+       items:[]
+     }
+      
+    
+  }
+var config = {
+       //conatins all the configuration details
+    };
+    firebase.initializeApp(config);
+    let itemsRef=firebase.database().ref('//your database entry point//');
+    itemsRef.on('value',ss=>{
+      let newItems=[];
+      let f_items=ss.val();
+      for(let i in f_items)
+      {
+        newItems.push({
+          id:i,
+          val:f_items[i]
+        })
+      }
+       
+      this.setState({
+        items:newItems
+      })
+      
+       
+    }) 
