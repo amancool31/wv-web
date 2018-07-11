@@ -1,36 +1,53 @@
  constructor()
   {
-    super();
-    this.state={
-       items:[]
-     }
+      super();
+      this.state={
+         items:[],
+         nItem:''
+       }
       
     
   }
   componentDidMount(){
-var config = {
-       //conatins all the configuration details
-    };
-    firebase.initializeApp(config);
-    let itemsRef=firebase.database().ref('//your database entry point//');
-    itemsRef.on('value',ss=>{
-      let newItems=[];
-      let f_items=ss.val();
-      for(let i in f_items)
+      var config = {
+         //conatins all the configuration details
+      };
+      firebase.initializeApp(config);
+      let itemsRef=firebase.database().ref('/your database entry point');
+      itemsRef.on('value',ss=>{
+        let newItems=[];
+        let f_items=ss.val();
+        for(let i in f_items)
+        {
+          newItems.push({
+            id:i,
+            val:f_items[i]
+          })
+        }
+         
+        this.setState({
+          items:newItems
+        })
+        
+         
+      }) 
+      }
+      //To remove new items from the front end
+      removeItem(itemIndex)
       {
-        newItems.push({
-          id:i,
-          val:f_items[i]
+        const itemRef = firebase.database().ref(`/your database entry point/${itemIndex}`);
+        itemRef.remove();
+      }
+      //to add new item fromk front end
+      addItem(text)
+      {
+        const itemRef = firebase.database().ref(`/your database entry point`);
+        const nItem=text;
+        itemRef.push(nItem);
+        this.setState({
+          nItem:''
         })
       }
-       
-      this.setState({
-        items:newItems
-      })
-      
-       
-    }) 
-    }
     renderList()
   {
     
