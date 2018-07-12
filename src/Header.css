@@ -5,8 +5,7 @@
     border-color: green;
     border-radius: 1ch
 }
-  
-.upper-container{
+  /*.upper-container{
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -14,7 +13,8 @@
     border-color: green;
     border-radius: 1ch
     
-}
+}*/
+
 .lower-container{
     display: flex;
     align-items: center;
