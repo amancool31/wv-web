@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Jumbotron,DropdownButton,MenuItem} from 'react-bootstrap';
 import './Header.css';
+import Signup from "./authentification/Signup"
 import {Link,Route} from 'react-router-dom'; 
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,Button, Modal, ModalHeader, ModalBody,Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
@@ -52,7 +53,7 @@ class Header extends Component {
                                    <Button className="danger" onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
                                </NavItem>
                                <NavItem>
-                                   <Button className="danger" ><span className="fa fa-sign-in fa-lg"></span> <a href="/">Signup</a></Button>
+                                   <Button className="danger" ><span className="fa fa-sign-in fa-lg"></span><Link to="/Signup">Signup</Link></Button>
                                </NavItem>
                            </Nav>
                       
