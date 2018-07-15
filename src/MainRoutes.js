@@ -8,10 +8,9 @@ class MainRoutes extends Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path='/' component={ImgViewer}/>
-                    <Route path='/shirts' component={Products}/>
-                    <Route path='/Jeans' component={Products}/> 
-                    <Route path='/Signup' component={Signup}/>
+                    <Route exact path='/' />
+                     
+                   
                 </Switch>
             </div>
         );
